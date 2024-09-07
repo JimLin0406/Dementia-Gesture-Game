@@ -13,13 +13,23 @@
 * 提升生活品質：讓老年人在遊戲中保持大腦和身體活躍。
 
 ## 遊戲GUI: 
-![alt game](./user_interface/media/game.png)
+![alt game](./media/game.png)
 
 ## Build project on Jetson Nano:
 Python version: 3.6.9  
 Jetpack version: 4.6.1  
 Docker image for built envrionment: ```docker pull jim0406/nano_course:latest```, which this docker is based from https://jetson-docs.com/libraries/mediapipe/l4t32.7.1/py3.6.9
 
+## 遊戲其他功能:
+用以紀錄每次猜拳反應時長
+<img src="./media/test.png" width="30%">
+
+## Debug:
+Jetson USB device連接問題 (X11 display error): 
+```
+xhost +SI:localusr:root
+docker restart
+```
 
 
 
