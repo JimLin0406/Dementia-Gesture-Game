@@ -60,8 +60,8 @@ class CameraApp(QWidget):
         return self.all_skeleton
 
     def qimage_to_numpy(self,qimage):
-        '''将 QImage 转换为 NumPy 数组'''
-        # 转换 QImage 到 QImage.Format.Format_RGB888 格式
+        '''將 QImage 轉換成 NumPy '''
+        # 轉換 QImage 到 QImage.Format.Format_RGB888 格式
         qimage = qimage.convertToFormat(QImage.Format.Format_RGB888)
 
         width = qimage.width()
@@ -69,10 +69,9 @@ class CameraApp(QWidget):
         ptr = qimage.bits()
         ptr.setsize(qimage.byteCount())
 
-        # 将字节数据转换为 NumPy 数组
         arr = np.frombuffer(ptr, dtype=np.uint8).reshape((height, width, 3))
 
-        # OpenCV 使用 BGR 格式，可能需要颜色通道转换
+        # OpenCV 使用 BGR 格式，需要RGB轉換
         arr = cv2.cvtColor(arr, cv2.COLOR_RGB2BGR)
 
         return arr
