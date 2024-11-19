@@ -20,6 +20,15 @@ Python version: 3.6.9
 Jetpack version: 4.6.1  
 Docker image for built envrionment: ```docker pull jim0406/nano_course:latest```, which this docker is based from https://jetson-docs.com/libraries/mediapipe/l4t32.7.1/py3.6.9
 
+確保啟動 Docker 容器時掛載 X11 和 USB 設備:
+```
+docker run -it --rm \
+  --device=/dev/video0:/dev/video0 \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -e DISPLAY=$DISPLAY \
+  --privileged \
+  my_docker_image
+```
 ## 遊戲其他功能:
 用以紀錄每次猜拳反應時長  
 <img src="./media/test.png" width="30%">
@@ -30,6 +39,9 @@ Jetson USB device連接問題 (X11 display error):
 xhost +SI:localusr:root
 docker restart
 ```
+Jetson 平台上，X11 是用來管理顯示的視窗系統。
+默認情況下，X11 僅允許當前用戶訪問，這會導致 Docker 容器內的應用程式（例如 GUI 應用程式）無法顯示到主機屏幕上。
+該命令通過設置 X11 訪問控制列表，允許 root 用戶（Docker 容器默認用戶）使用主機的顯示設備。
 
 
 
