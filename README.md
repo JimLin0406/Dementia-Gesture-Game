@@ -16,6 +16,12 @@ Improve Quality of Life: Help seniors stay mentally and physically active while 
 ## Game GUI: 
 ![alt game](./media/game.png)
 
+## Flow chart of gaming
+<img src="./media/flow.png" width="50%">
+
+The UI displays a question, and the players perform actions based on the question. When the total number of fingers on the table matches the question, the player loses one point.
+
+
 ## Build project on Jetson Nano:
 Python version: 3.6.9  
 Jetpack version: 4.6.1  
