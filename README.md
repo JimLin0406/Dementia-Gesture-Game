@@ -5,6 +5,7 @@ In this project, we trained an MLP model to analyze hand skeleton data and ultim
 ## Purpose
 With the growing aging population, it is estimated that by 2050, 131 million people will suffer from dementia. Studies have shown that finger exercises can improve cognitive function and delay the progression of mild cognitive impairment (MCI) to dementia.
 
+
 The objectives of this game are:
 
 Promote Cognitive Health: Stimulate the brain through finger exercises to improve or maintain cognitive function in older adults.
@@ -18,7 +19,8 @@ Improve Quality of Life: Help seniors stay mentally and physically active while 
 ## Build project on Jetson Nano:
 Python version: 3.6.9  
 Jetpack version: 4.6.1  
-Docker image for built envrionment: ```docker pull jim0406/nano_course:latest```, which this docker is based from https://jetson-docs.com/libraries/mediapipe/l4t32.7.1/py3.6.9
+Docker image for built envrionment: ```docker pull jim0406/nano_course:latest```, which this docker is based from 
+https://jetson-docs.com/libraries/mediapipe/l4t32.7.1/py3.6.9
 
 Ensure that X11 and USB devices are mounted when starting the Docker container:
 ```
@@ -31,6 +33,7 @@ docker run -it --rm \
 ```
 ## Other function in this game:
 To record the reaction time for each round of rock-paper-scissors.
+
 <img src="./media/test.png" width="30%">
 
 ## Debug:
