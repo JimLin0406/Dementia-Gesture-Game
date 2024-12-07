@@ -9,8 +9,11 @@ With the growing aging population, it is estimated that by 2050, 131 million peo
 The objectives of this game are:
 
 Promote Cognitive Health: Stimulate the brain through finger exercises to improve or maintain cognitive function in older adults.
+
 Delay Cognitive Decline: Encourage sustained physical activity through gameplay, potentially slowing cognitive deterioration.
+
 Enhance Social Interaction: Provide a platform for older adults to interact with others, fostering social engagement.
+
 Improve Quality of Life: Help seniors stay mentally and physically active while enjoying the game.
 
 ## Game GUI: 
